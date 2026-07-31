@@ -14,16 +14,15 @@ class Solution {
      * @return {ListNode}
      */
     reverseList(head) {
-
         let current = head
         let prev = null
 
         while(current !== null){
-            let newList = current.next
+            let newNode = current.next
             current.next = prev
             prev = current
-            current = newList
+            current = newNode
         }
-     return prev
+        return prev
     }
 }
